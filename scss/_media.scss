@@ -91,6 +91,10 @@
     -ms-flex-direction: row;
     flex-direction: row;
   }
+  .found__container {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 769px) {
@@ -301,6 +305,9 @@
   }
   .icons-footer__link {
     padding: 25px;
+  }
+  .found__image {
+    display: none;
   }
 }
 @media (max-width: 480px) {

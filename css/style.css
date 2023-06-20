@@ -1203,7 +1203,7 @@ textarea.input {
   z-index: -1;
 }
 
-@media (any-hover: hover) {
+@media (min-width: 768px) and (any-hover: hover) {
   .card-service__btn:hover::before {
     opacity: 1;
   }
