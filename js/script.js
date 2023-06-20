@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   })(),
     setTimeout(() => {
-      if (document.documentElement.clientWidth < 769) {
         (function spollers() {
           const spollers = document.querySelectorAll(".spollers");
 
@@ -38,9 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
               }
             });
           });
-        })();
-      }
-
+        })(),
       (function video() {
         const videoBody = document.querySelector(".video__body");
         videoBody.addEventListener("click", (e) => {
