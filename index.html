@@ -840,13 +840,28 @@
         </div>
       </footer>
     </div>
-    <link rel="preload" href="./css/style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <!-- <link rel="preload" href="./css/style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <link rel="preload" href="./css/icon.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <link
       rel="preload"
       href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
       as="style"
-      onload="this.onload=null;this.rel='stylesheet'" />
+      onload="this.onload=null;this.rel='stylesheet'" /> -->
+    <!-- <noscript><link rel="stylesheet" href="./css/style.min.css" /></noscript>
+    <noscript><link rel="stylesheet" href="./css/icon.css" /></noscript>
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" /></noscript> -->
+
+    <script>
+      function asyncCSS(href) {
+        var css = document.createElement("link");
+        css.rel = "stylesheet";
+        css.href = href;
+        document.head.appendChild(css);
+      }
+      asyncCSS("./css/style.min.css");
+      asyncCSS("./css/icon.css");
+      asyncCSS("https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css");
+    </script>
     <script src="./js/script.js"></script>
     <script src="./js/simplebar.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" defer></script>
