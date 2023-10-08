@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("load", () => {
   (function scroll() {
     window.addEventListener("scroll", () => {
       let header = document.querySelector(".header");
