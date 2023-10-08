@@ -12,56 +12,55 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   })(),
     setTimeout(() => {
-        (function spollers() {
-          const spollers = document.querySelectorAll(".spollers");
+      (function spollers() {
+        const spollers = document.querySelectorAll(".spollers");
+        spollers.forEach((item) => {
+          item.addEventListener("click", (e) => {
+            self = e.currentTarget;
+            let spoller = self.querySelector(".spoller");
+            let cardTop = self.querySelector(".card-service__top");
+            let spanIcon = self.querySelector(".icon-arrow-down");
+            self.classList.toggle("spollers-parent");
+            spoller.classList.toggle("open");
+            if (spanIcon) {
+              spanIcon.classList.toggle("open");
+            }
+            if (cardTop) {
+              cardTop.classList.toggle("open");
+            }
 
-          spollers.forEach((item) => {
-            item.addEventListener("click", (e) => {
-              self = e.currentTarget;
-              let spoller = self.querySelector(".spoller");
-              let cardTop = self.querySelector(".card-service__top");
-              let spanIcon = self.querySelector(".icon-arrow-down");
-              self.classList.toggle("spollers-parent");
-              spoller.classList.toggle("open");
-              if (spanIcon) {
-                spanIcon.classList.toggle("open");
-              }
-              if (cardTop) {
-                cardTop.classList.toggle("open");
-              }
-
-              if (spoller.style.maxHeight) {
-                spoller.style.maxHeight = null;
-              } else {
-                spoller.style.maxHeight = spoller.scrollHeight + "px";
-              }
-            });
+            if (spoller.style.maxHeight) {
+              spoller.style.maxHeight = null;
+            } else {
+              spoller.style.maxHeight = spoller.scrollHeight + "px";
+            }
           });
-        })(),
-      (function video() {
-        const videoBody = document.querySelector(".video__body");
-        videoBody.addEventListener("click", (e) => {
-          let self = e.currentTarget;
-          let image = self.querySelector(".video__image");
-          let videoBottom = self.querySelector(".video__bottom");
-          let videoInfo = self.querySelector(".video__info");
-          if (self.classList.contains("playing")) {
-            return;
-          } else {
-            self.classList.add("playing");
-            image.classList.add("playing");
-            videoBottom.classList.add("playing");
-            videoInfo.classList.add("playing");
-          }
-          const t = videoBody.dataset.videoSrc;
-          self.insertAdjacentHTML(
-            "afterbegin",
-            '<iframe src="https://www.youtube.com/embed/' +
-              t +
-              '?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
-          );
         });
       })(),
+        (function video() {
+          const videoBody = document.querySelector(".video__body");
+          videoBody.addEventListener("click", (e) => {
+            let self = e.currentTarget;
+            let image = self.querySelector(".video__image");
+            let videoBottom = self.querySelector(".video__bottom");
+            let videoInfo = self.querySelector(".video__info");
+            if (self.classList.contains("playing")) {
+              return;
+            } else {
+              self.classList.add("playing");
+              image.classList.add("playing");
+              videoBottom.classList.add("playing");
+              videoInfo.classList.add("playing");
+            }
+            const t = videoBody.dataset.videoSrc;
+            self.insertAdjacentHTML(
+              "afterbegin",
+              '<iframe src="https://www.youtube.com/embed/' +
+                t +
+                '?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+            );
+          });
+        })(),
         (function slider() {
           const swiper = new Swiper(".swiper", {
             // Optional parameters
@@ -75,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
             },
           });
         })();
-    }, 1000);
+    }, 2000);
 
   (function scrollAnimation() {
     const animationBlocks = document.querySelectorAll("[data-animation]");
