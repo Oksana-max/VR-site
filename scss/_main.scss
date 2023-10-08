@@ -513,7 +513,7 @@
     }
   }
 
-  @media (min-width: 990px) and (any-hover: hover) {
+  @media (min-width: 768px) and (any-hover: hover) {
     &:hover .card-service__link {
       opacity: 0.9;
       visibility: visible;
@@ -763,6 +763,8 @@
     @media (min-width: 768px) and (any-hover: hover) {
       &:hover::before {
         opacity: 1;
+      }
+      &:hover {
       }
     }
   }
