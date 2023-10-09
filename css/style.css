@@ -93,6 +93,7 @@ h6 {
   src: url("../fonts/ChakraPetch-Bold.ttf") format("truetype"), url("../fonts/ChakraPetch-Bold.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -100,6 +101,7 @@ h6 {
   src: url("../fonts/ChakraPetch-Regular.ttf") format("truetype"), url("../fonts/ChakraPetch-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -107,6 +109,7 @@ h6 {
   src: url("../fonts/ChakraPetch-Medium.ttf") format("truetype"), url("../fonts/ChakraPetch-Medium.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -114,6 +117,7 @@ h6 {
   src: url("../fonts/ChakraPetch-SemiBold.ttf") format("truetype"), url("../fonts/ChakraPetch-SemiBold.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -121,6 +125,7 @@ h6 {
   src: url("../fonts/ChakraPetch-Light.ttf") format("truetype"), url("../fonts/ChakraPetch-Light.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 body {
@@ -129,6 +134,7 @@ body {
   font-weight: 600;
   color: #fff;
   background: #18181b;
+  font-display: swap;
 }
 
 .wrapper {
@@ -769,6 +775,12 @@ textarea.input {
   margin-bottom: 30px;
 }
 
+@media (max-width: 768px) {
+  .hero__content {
+    margin-bottom: 20px;
+  }
+}
+
 .hero__text {
   font-style: normal;
   font-weight: 300;
@@ -799,10 +811,23 @@ textarea.input {
   transform: translate(-50%, -50%) rotate(-30deg);
 }
 
-.hero img {
+.hero__image img {
   object-fit: contain;
   height: 100%;
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  .hero__image img {
+    height: 350px;
+    width: 300px;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero__image img {
+    display: none;
+  }
 }
 
 .hero::before {
@@ -962,6 +987,19 @@ textarea.input {
   height: 100%;
   width: 100%;
   padding-left: 20px;
+}
+
+@media (max-width: 768px) {
+  .about__image img {
+    height: 350px;
+    width: 300px;
+  }
+}
+
+@media (max-width: 500px) {
+  .about__image img {
+    display: none;
+  }
 }
 
 .about__image::after {
@@ -1236,6 +1274,19 @@ textarea.input {
   object-fit: contain;
   width: 100%;
   height: 100%;
+}
+
+@media (max-width: 768px) {
+  .choose__image img {
+    height: 350px;
+    width: 300px;
+  }
+}
+
+@media (max-width: 500px) {
+  .choose__image img {
+    display: none;
+  }
 }
 
 .choose__image::after {
@@ -2326,8 +2377,8 @@ textarea.input {
     top: 0;
   }
   .testimonial__img {
-    max-width: 960px;
-    max-height: 960px;
+    max-width: 800px;
+    max-height: 800px;
   }
   .pricing__body {
     flex-direction: column;
@@ -2546,6 +2597,10 @@ textarea.input {
   .found__image {
     display: none;
   }
+  .pricing__image img {
+    width: 180px;
+    height: 200px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -2570,6 +2625,10 @@ textarea.input {
   }
   .slide {
     min-height: 16rem;
+  }
+  .testimonial__img {
+    max-width: 600px;
+    max-height: 600px;
   }
 }
 
