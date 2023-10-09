@@ -1285,7 +1285,9 @@ textarea.input {
 
 @media (max-width: 500px) {
   .choose__image img {
-    display: none;
+    height: 250px;
+    width: 200px;
+    text-align: center;
   }
 }
 
@@ -2537,7 +2539,6 @@ textarea.input {
   }
   .choose__container {
     flex-direction: column-reverse;
-    align-items: flex-start;
   }
   .choose__column {
     flex: 1 1 100%;
