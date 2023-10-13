@@ -2530,7 +2530,7 @@ textarea.input {
   }
   .card-service__spoller {
     padding-left: 15px;
-    max-height: 0;
+    height: 0;
     overflow: hidden;
     transition: all 0.2s ease-out;
   }

@@ -28,8 +28,6 @@ window.addEventListener("load", () => {
             self.classList.toggle("spollers-parent");
             if (spoller.classList.contains("hidden")) {
               spoller.classList.remove("hidden");
-            } else {
-              spoller.classList.add("hidden");
             }
             spoller.classList.toggle("open");
             if (spanIcon) {
