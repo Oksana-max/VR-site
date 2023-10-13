@@ -15,12 +15,22 @@ window.addEventListener("load", () => {
       (function spollers() {
         const spollers = document.querySelectorAll(".spollers");
         spollers.forEach((item) => {
+          //если есть уже открытый спойлер
+          if (item.querySelector(".spoller").classList.contains("open")) {
+            item.querySelector(".spoller").style.height = item.querySelector(".spoller").scrollHeight + "px";
+          }
+          //Click
           item.addEventListener("click", (e) => {
             self = e.currentTarget;
             let spoller = self.querySelector(".spoller");
             let cardTop = self.querySelector(".card-service__top");
             let spanIcon = self.querySelector(".icon-arrow-down");
             self.classList.toggle("spollers-parent");
+            if (spoller.classList.contains("hidden")) {
+              spoller.classList.remove("hidden");
+            } else {
+              spoller.classList.add("hidden");
+            }
             spoller.classList.toggle("open");
             if (spanIcon) {
               spanIcon.classList.toggle("open");
@@ -29,10 +39,10 @@ window.addEventListener("load", () => {
               cardTop.classList.toggle("open");
             }
 
-            if (spoller.style.maxHeight) {
-              spoller.style.maxHeight = null;
+            if (spoller.style.height) {
+              spoller.style.height = null;
             } else {
-              spoller.style.maxHeight = spoller.scrollHeight + "px";
+              spoller.style.height = spoller.scrollHeight + "px";
             }
           });
         });
@@ -63,12 +73,9 @@ window.addEventListener("load", () => {
         })(),
         (function slider() {
           const swiper = new Swiper(".swiper", {
-            // Optional parameters
             direction: "horizontal",
             loop: true,
             autoplay: true,
-
-            // If we need pagination
             pagination: {
               el: ".swiper-pagination",
             },

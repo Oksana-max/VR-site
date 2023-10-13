@@ -75,6 +75,7 @@
     display: -ms-flexbox;
     display: flex;
     gap: calc((var(--index) * 3.8));
+    padding-bottom: 5px;
   }
   &__spoller {
     display: -webkit-box;
@@ -127,6 +128,7 @@
     -webkit-transition: all 0.2s;
     -o-transition: all 0.2s;
     transition: all 0.2s;
+    white-space: nowrap;
     &:hover {
       color: #fff;
       -webkit-transition: all 0.2s;
@@ -159,6 +161,7 @@
     -webkit-transition: all 0.2s;
     -o-transition: all 0.2s;
     transition: all 0.2s;
+
     &:hover {
       color: #fff;
     }

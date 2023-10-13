@@ -11,8 +11,8 @@
     top: 0;
   }
   .testimonial__img {
-    max-width: 960px;
-    max-height: 960px;
+    max-width: 800px;
+    max-height: 800px;
   }
   .pricing__body {
     -webkit-box-orient: vertical;
@@ -81,8 +81,6 @@
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-  }
-  .footer__logo {
   }
 
   .footer__actions {
@@ -238,9 +236,6 @@
     -webkit-box-direction: reverse;
     -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
   }
   .choose__column {
     -webkit-box-flex: 1;
@@ -309,6 +304,12 @@
   .found__image {
     display: none;
   }
+  .pricing__image {
+    img {
+      width: 180px;
+      height: 200px;
+    }
+  }
 }
 @media (max-width: 480px) {
   .btn-header {
@@ -336,46 +337,50 @@
   .slide {
     min-height: 16rem;
   }
+  .testimonial__img {
+    max-width: 600px;
+    max-height: 600px;
+  }
 }
 
 //media for clients//
 
 @media (max-width: 15000px) {
-  .client2.spollers-parent {
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-    -webkit-transform: translateX(-90%);
-    -ms-transform: translateX(-90%);
-    transform: translateX(-90%);
-  }
-  .client4.spollers-parent {
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-    -webkit-transform: translateX(-100%);
-    -ms-transform: translateX(-100%);
-    transform: translateX(-100%);
-  }
-}
-@media (max-width: 1340px) {
-  .client2.spollers-parent {
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-    -webkit-transform: translateX(-220%);
-    -ms-transform: translateX(-220%);
-    transform: translateX(-220%);
-  }
-  .client4.spollers-parent {
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-    -webkit-transform: translateX(-230%);
-    -ms-transform: translateX(-230%);
-    transform: translateX(-230%);
-    bottom: 20%;
-  }
+  //   .client2.spollers-parent {
+  //     -webkit-transition: all 0.3s;
+  //     -o-transition: all 0.3s;
+  //     transition: all 0.3s;
+  //     -webkit-transform: translateX(-90%);
+  //     -ms-transform: translateX(-90%);
+  //     transform: translateX(-90%);
+  //   }
+  //   .client4.spollers-parent {
+  //     -webkit-transition: all 0.3s;
+  //     -o-transition: all 0.3s;
+  //     transition: all 0.3s;
+  //     -webkit-transform: translateX(-100%);
+  //     -ms-transform: translateX(-100%);
+  //     transform: translateX(-100%);
+  //   }
+  // }
+  // @media (max-width: 1340px) {
+  //   .client2.spollers-parent {
+  //     -webkit-transition: all 0.3s;
+  //     -o-transition: all 0.3s;
+  //     transition: all 0.3s;
+  //     -webkit-transform: translateX(-220%);
+  //     -ms-transform: translateX(-220%);
+  //     transform: translateX(-220%);
+  //   }
+  //   .client4.spollers-parent {
+  //     -webkit-transition: all 0.3s;
+  //     -o-transition: all 0.3s;
+  //     transition: all 0.3s;
+  //     -webkit-transform: translateX(-230%);
+  //     -ms-transform: translateX(-230%);
+  //     transform: translateX(-230%);
+  //     bottom: 20%;
+  //   }
   .articles__column:last-child {
     -ms-flex-negative: 1;
     flex-shrink: 1;

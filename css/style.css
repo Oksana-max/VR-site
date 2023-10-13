@@ -137,6 +137,10 @@ body {
   font-display: swap;
 }
 
+.hidden {
+  display: none;
+}
+
 .wrapper {
   min-height: 100%;
   display: flex;
@@ -496,6 +500,7 @@ textarea.input {
 .menu__list {
   display: flex;
   gap: calc((var(--index) * 3.8));
+  padding-bottom: 5px;
 }
 
 .menu__spoller {
@@ -529,6 +534,7 @@ textarea.input {
   line-height: 175%;
   color: #d1d1d1;
   transition: all 0.2s;
+  white-space: nowrap;
 }
 
 .menu__link:hover {
@@ -928,8 +934,10 @@ textarea.input {
 
 .advantages__content {
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   flex-wrap: wrap;
+  align-items: stretch;
 }
 
 .advantages__column {
@@ -1561,6 +1569,7 @@ textarea.input {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .testimonial__img {
@@ -1568,8 +1577,8 @@ textarea.input {
   max-height: 1200px;
 }
 
-.testimonial__img s img {
-  width: 100%;
+.testimonial__img img {
+  max-width: 100%;
   height: 100%;
   object-fit: contain;
 }
@@ -1580,9 +1589,13 @@ textarea.input {
 
 .client {
   position: absolute;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s;
 }
 
 .client__btn {
+  position: relative;
   width: 80px;
   height: 80px;
   background: url("../img/svg/client-bg.svg") center/cover no-repeat;
@@ -1615,21 +1628,23 @@ textarea.input {
 }
 
 .client__body {
-  max-height: 0;
-  opacity: 0;
   font-size: 12px;
   font-weight: 400;
   line-height: 167%;
   overflow: hidden;
-  transition: all 0.3s ease-out;
-  will-change: max-height;
-  position: absolute;
+  z-index: 20;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  will-change: height;
   width: 18.75rem;
-  left: calc(100% + 15px);
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 18px;
-  background: url("../img/svg/recal-bg.svg") 0 0/100% 100% no-repeat;
+  padding: 1.125rem 1.125rem 1.125rem 1.4375rem;
+  opacity: 0;
+  background-image: url("../img/recal-bg.webp");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
 .client__body.open {
@@ -1645,32 +1660,44 @@ textarea.input {
   color: #ffffff;
 }
 
-.client__body_active {
-  max-height: 200px;
-}
-
 .client1 {
   top: 34%;
   left: 4%;
-  transition: all 0.3s;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
 }
 
 .client2 {
   top: 25%;
-  right: 15%;
-  transition: all 0.3s;
+  right: 0;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
 }
 
 .client3 {
   bottom: 7%;
   left: 51%;
-  transition: all 0.3s;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
 }
 
 .client4 {
-  bottom: 38%;
-  right: 16%;
-  transition: all 0.3s;
+  bottom: 30%;
+  right: 22%;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
 }
 
 .pricing__top {
@@ -2634,26 +2661,6 @@ textarea.input {
 }
 
 @media (max-width: 15000px) {
-  .client2.spollers-parent {
-    transition: all 0.3s;
-    transform: translateX(-90%);
-  }
-  .client4.spollers-parent {
-    transition: all 0.3s;
-    transform: translateX(-100%);
-  }
-}
-
-@media (max-width: 1340px) {
-  .client2.spollers-parent {
-    transition: all 0.3s;
-    transform: translateX(-220%);
-  }
-  .client4.spollers-parent {
-    transition: all 0.3s;
-    transform: translateX(-230%);
-    bottom: 20%;
-  }
   .articles__column:last-child {
     flex-shrink: 1;
   }
