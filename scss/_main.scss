@@ -937,14 +937,13 @@
   // .choose-spollers__text
 
   &__text {
-    max-height: 0;
+    height: 0;
     opacity: 0;
     overflow: hidden;
     padding: 0;
     -webkit-transition: all 0.3s ease-out;
     -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
-    will-change: max-height;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
     font-weight: 400;

@@ -510,7 +510,7 @@ textarea.input {
 }
 
 .menu__submenu {
-  max-height: 0;
+  height: 0;
   width: 150px;
   overflow: hidden;
   transition: all 0.2s ease-out;
@@ -1374,12 +1374,11 @@ textarea.input {
 }
 
 .choose-spollers__text {
-  max-height: 0;
+  height: 0;
   opacity: 0;
   overflow: hidden;
   padding: 0;
   transition: all 0.3s ease-out;
-  will-change: max-height;
   box-sizing: content-box;
   font-weight: 400;
   line-height: 1.6;
@@ -2658,6 +2657,9 @@ textarea.input {
     max-width: 600px;
     max-height: 600px;
   }
+  .client__body {
+    width: 10rem;
+  }
 }
 
 @media (max-width: 15000px) {
@@ -2666,56 +2668,22 @@ textarea.input {
   }
 }
 
-@media (max-width: 900px) {
-  .client2.spollers-parent {
-    transition: all 0.3s;
-    top: 16%;
-    transform: translateX(-230%);
-  }
-  .client4.spollers-parent {
-    transition: all 0.3s;
-    transform: translateX(-240%);
-    bottom: 20%;
-  }
-  .client3.spollers-parent {
-    bottom: 3%;
-  }
-}
-
 @media (max-width: 800px) {
   .client2.spollers-parent {
     transition: all 0.3s;
-    transform: translateX(-471%);
+    transform: translateY(-60%);
+    -webkit-transform: translateY(-60%);
+    -moz-transform: translateY(-60%);
+    -ms-transform: translateY(-60%);
+    -o-transform: translateY(-60%);
   }
   .client3.spollers-parent {
     transition: all 0.3s;
-    bottom: 3%;
-    transform: translateX(-190%);
-  }
-  .client4.spollers-parent {
-    transition: all 0.3s;
-    transform: translateX(-376%);
-    bottom: 20%;
-  }
-}
-
-@media (max-width: 540px) {
-  .client1.spollers-parent {
-    transition: all 0.3s;
-    left: 0;
-  }
-  .client2.spollers-parent {
-    transition: all 0.3s;
-    right: 0%;
-    transform: translateX(-400%);
-  }
-  .client3.spollers-parent {
-    transition: all 0.3s;
-    transform: translateX(-270%);
-  }
-  .client4.spollers-parent {
-    transition: all 0.3s;
-    transform: translateX(-350%);
+    transform: translateX(-60%);
+    -webkit-transform: translateX(-60%);
+    -moz-transform: translateX(-60%);
+    -ms-transform: translateX(-60%);
+    -o-transform: translateX(-60%);
   }
 }
 
